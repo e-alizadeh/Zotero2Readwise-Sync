@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-#  schedule:
-#    - cron: "5 4 * * 0,3" # Runs at 04:05 UTC on Sundays and Wednesdays  (Check https://crontab.tech/)
+  schedule:
+    - cron: "0 1 * * *" # Runs at 01:00 AM UTC every day (Check https://crontab.tech/)
 
 jobs:
   zotero-to-readwise-automation:
