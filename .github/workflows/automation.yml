@@ -21,11 +21,11 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: 💿 Install Zotero2Readwise package
+      - name: 💿 Install Zotero2Readwise Python package
         run: pip install zotero2readwise
 
-      - name: 📥 Download Python Script to run the automation
+      - name: 📥 Download the Python script needed for automation
         run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/run.py -o run.py
 
-      - name: 🚀 Run the auotmation
+      - name: 🚀 Run Automation
         run: python run.py ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}

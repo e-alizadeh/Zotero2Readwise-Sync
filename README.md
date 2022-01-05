@@ -32,12 +32,12 @@ Once you come up with the desired schedule, update the cron argument in `.github
 For instance above cron expression is at 02:30 AM every Monday, Wednesday, and Friday. 
 You can change the schedule as you wish. Just make sure that your cron job expression is valid by checking 
 
-
-
+A scheduled GitHub Action will show **scheduled** next to the deployment as can be seen below. 
+![](img/scheduled_automation.jpg)
 
 
 # How to add secrets to your repo's GitHub Actions secrets
-![](./tutorial/github_action_secrets.gif)
+![](img/github_action_secrets.gif)
 
 
 # Manual Trigger
@@ -53,4 +53,4 @@ git push
 This will run the automation immediately and won't impact your scheduled automation.
 
 # Note
-*Keep in mind that GitHub Actions may run your scheduled automation with some delay!*
+*Keep in mind that GitHub Actions may run the scheduled automation with some delay (sometimes with one-hour delay!).*
