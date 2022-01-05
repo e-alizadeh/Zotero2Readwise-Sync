@@ -29,3 +29,7 @@ jobs:
 
       - name: 🚀 Run the auotmation
         run: python run.py ${READWISE_TOKEN} ${ZOTERO_KEY} ${ZOTERO_ID}
+        with:
+          READWISE_TOKEN: ${{ secrets.READWISE_TOKEN }}
+          ZOTERO_KEY: ${{ secrets.ZOTERO_KEY }}
+          ZOTERO_ID: ${{ secrets.ZOTERO_ID }}
