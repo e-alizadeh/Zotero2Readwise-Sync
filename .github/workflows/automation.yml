@@ -1,4 +1,4 @@
-name: ⚙ Trigger Zotero to Readwise Integration
+name: Zotero to Readwise Automation
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
   zotero-to-readwise-automation:
     runs-on: ubuntu-latest
     steps:
-      - name: 🍽️ Get working copy
+      - name: 🍽️ Checkout the repo
         uses: actions/checkout@master
         with:
           fetch-depth: 1
