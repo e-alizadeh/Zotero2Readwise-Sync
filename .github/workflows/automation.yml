@@ -28,8 +28,4 @@ jobs:
         run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/run.py -o run.py
 
       - name: 🚀 Run the auotmation
-        run: python run.py ${READWISE_TOKEN} ${ZOTERO_KEY} ${ZOTERO_ID}
-        with:
-          READWISE_TOKEN: ${{ secrets.READWISE_TOKEN }}
-          ZOTERO_KEY: ${{ secrets.ZOTERO_KEY }}
-          ZOTERO_ID: ${{ secrets.ZOTERO_ID }}
+        run: python run.py ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}
