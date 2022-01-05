@@ -1,0 +1,31 @@
+name: ⚙ Trigger Zotero to Readwise Integration
+
+on:
+  push:
+    branches:
+      - master
+#  schedule:
+#    - cron: "5 4 * * 0,3" # Runs at 04:05 UTC on Sundays and Wednesdays  (Check https://crontab.tech/)
+
+jobs:
+  zotero-to-readwise-automation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🍽️ Get working copy
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+
+      - name: 🐍 Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: 💿 Install Zotero2Readwise package
+        run: pip install zotero2readwise
+
+      - name: 📥 Download Python Script to run the automation
+        run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/run.py -o run.py
+
+      - name: 🚀 Run the auotmation
+        run: python run.py ${READWISE_TOKEN} ${ZOTERO_KEY} ${ZOTERO_ID}
