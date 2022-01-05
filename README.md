@@ -26,10 +26,10 @@ Once you come up with the desired schedule, update the cron argument in `.github
 
 ```yaml
   schedule:
-    - cron: "30 2 * * 1,3,5"
+    - cron: "0 3 * * 1,3,5"
 ```
-
-For instance above cron expression is at 02:30 AM every Monday, Wednesday, and Friday. 
+*Above is the default schedule I've set up to run the automation.*
+The cron expression means to run the automation **at 03:00 AM every Monday, Wednesday, and Friday**. 
 You can change the schedule as you wish. Just make sure that your cron job expression is valid by checking 
 
 A scheduled GitHub Action will show **scheduled** next to the deployment as can be seen below. 
