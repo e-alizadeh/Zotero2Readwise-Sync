@@ -27,8 +27,5 @@ jobs:
       - name: 📥 Download the Python script needed for automation
         run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/run.py -o run.py
       
-      - name: 📥 Download the helper module
-        run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/helper.py -o helper.py
-      
       - name: 🚀 Run Automation
         run: python run.py ${{ secrets.READWISE_TOKEN }} ${{ secrets.ZOTERO_KEY }} ${{ secrets.ZOTERO_ID }}
