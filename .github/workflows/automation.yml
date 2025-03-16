@@ -16,10 +16,10 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: 🐍 Set up Python 3.8
+      - name: 🐍 Set up Python 3.9
         uses: actions/setup-python@v5
         with:
-          python-version: '3.8'
+          python-version: '3.9'
 
       - name: 💿 Install Zotero2Readwise Python package
         run: pip install zotero2readwise
