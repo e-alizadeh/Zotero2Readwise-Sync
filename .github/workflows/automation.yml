@@ -5,7 +5,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: "0 3 * * 1,5" # Runs at 03:00 AM (UTC) every day (Check https://crontab.guru/)
+    - cron: "0 3 * * 1" # Runs at 03:00 AM (UTC) every day (Check https://crontab.guru/)
 
 jobs:
   zotero-to-readwise-automation:
@@ -22,7 +22,7 @@ jobs:
           python-version: '3.8'
 
       - name: 💿 Install Zotero2Readwise Python package
-        run: pip install zotero2readwise
+        run: pip install git+https://github.com/e-alizadeh/Zotero2Readwise.git
 
       - name: 📥 Download the Python script needed for automation
         run:  curl https://raw.githubusercontent.com/e-alizadeh/Zotero2Readwise/master/zotero2readwise/run.py -o run.py
