@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: 💿 Install dependencies
+        run: pip install setuptools
+
       - name: 💿 Install Zotero2Readwise Python package
         run: pip install git+https://github.com/e-alizadeh/Zotero2Readwise.git
 
